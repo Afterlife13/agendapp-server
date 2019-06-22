@@ -8,6 +8,7 @@ class NinosRoutes {
         this.config();
     }
     config() {
+        this.router.get('/', ninosController_1.ninosController.prueba);
         this.router.get('/:id', ninosController_1.ninosController.list);
         this.router.get('/getone/:id', ninosController_1.ninosController.getOne);
         this.router.post('/', ninosController_1.ninosController.create);

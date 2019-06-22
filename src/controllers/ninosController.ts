@@ -4,6 +4,10 @@ import pool from '../database';
 
 class NinosController {
 
+    public async prueba(req: Request, res: Response): Promise<any> {
+        return res.json("Servidor funcionando")
+    }
+
     public async list(req: Request, res: Response): Promise<any> {
         const { id } = req.params;
         const ninos = await pool.query('SELECT * FROM nino WHERE iduser = ?', [id]);
