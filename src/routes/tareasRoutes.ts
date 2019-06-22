@@ -2,7 +2,7 @@ import { Router } from 'express';
 
 import { tareasController } from '../controllers/tareasController';
 
-class GamesRoutes {
+class TareasRoutes {
 
     public router: Router = Router();
 
@@ -24,5 +24,5 @@ class GamesRoutes {
 
 }
 
-const gamesRoutes = new GamesRoutes();
-export default gamesRoutes.router;
+const tareasRoutes = new TareasRoutes();
+export default tareasRoutes.router;

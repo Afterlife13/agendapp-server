@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const tareasController_1 = require("../controllers/tareasController");
-class GamesRoutes {
+class TareasRoutes {
     constructor() {
         this.router = express_1.Router();
         this.config();
@@ -19,5 +19,5 @@ class GamesRoutes {
         this.router.delete('/:id', tareasController_1.tareasController.delete);
     }
 }
-const gamesRoutes = new GamesRoutes();
-exports.default = gamesRoutes.router;
+const tareasRoutes = new TareasRoutes();
+exports.default = tareasRoutes.router;
