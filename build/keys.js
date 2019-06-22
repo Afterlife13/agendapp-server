@@ -6,6 +6,5 @@ exports.default = {
         user: 'u446997370_alb',
         password: 'TripleDeath123-',
         database: 'u446997370_agpp',
-        port: '3000'
     }
 };
