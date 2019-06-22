@@ -18,7 +18,7 @@ class Server {
         this.app = express();
 
         //Settings
-        this.app.set('port', process.env.PORT || 3000);
+        this.app.set('port', 3000); // process.env.PORT || 3000
 
         //Middlewares
         this.app.use(morgan('dev'));
