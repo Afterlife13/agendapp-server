@@ -17,7 +17,7 @@ class Server {
     constructor() {
         this.app = express_1.default();
         //Settings
-        this.app.set('port', process.env.PORT || 3000); // process.env.PORT || 3000
+        this.app.set('port', 3000); // process.env.PORT || 3000
         //Middlewares
         this.app.use(morgan_1.default('dev'));
         this.app.use(cors_1.default());
