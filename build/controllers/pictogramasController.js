@@ -45,10 +45,10 @@ class PictogramasController {
     }
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const rows = yield database_1.default.query('SELECT * FROM pictograma WHERE nombre = ? AND idgaleria = ?', [req.body.nombre, req.body.idgaleria]);
-            if (rows.length > 0) {
-                return res.status(400).json({ text: 'Nombre existente' });
-            }
+            //const rows = yield database_1.default.query('SELECT * FROM pictograma WHERE nombre = ? AND idgaleria = ?', [req.body.nombre, req.body.idgaleria]);
+            //if (rows.length > 0) {
+            //    return res.status(400).json({ text: 'Nombre existente' });
+            //}
             yield database_1.default.query('INSERT INTO pictograma set ?', [req.body]);
             const pictograma = yield database_1.default.query('SELECT * FROM pictograma WHERE nombre = ? AND idgaleria = ?', [req.body.nombre, req.body.idgaleria]);
             res.json(pictograma[0]);
