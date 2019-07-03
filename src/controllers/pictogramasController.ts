@@ -32,10 +32,10 @@ class PictogramasController {
     }
 
     public async create(req: Request, res: Response): Promise<any> {
-        const rows = await pool.query('SELECT * FROM pictograma WHERE nombre = ? AND idgaleria = ?', [req.body.nombre, req.body.idgaleria]);
-        if (rows.length > 0){
-            return res.status(400).json({ text:'Nombre existente'});
-        }
+        // const rows = await pool.query('SELECT * FROM pictograma WHERE nombre = ? AND idgaleria = ?', [req.body.nombre, req.body.idgaleria]);
+        // if (rows.length > 0){
+        //    return res.status(400).json({ text:'Nombre existente'});
+        //}
         await pool.query('INSERT INTO pictograma set ?', [req.body]);
 
         const pictograma = await pool.query('SELECT * FROM pictograma WHERE nombre = ? AND idgaleria = ?', [req.body.nombre, req.body.idgaleria]);
