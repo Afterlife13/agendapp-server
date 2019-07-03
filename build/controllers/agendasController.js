@@ -66,13 +66,13 @@ class AgendasController {
         return __awaiter(this, void 0, void 0, function* () {
             const result = yield database_1.default.query('INSERT INTO agenda set ?', [req.body]);
             req.body.id = result.insertId;
-            yield database_1.default.query('INSERT INTO dia set dia="Lunes", idagenda= ?', req.body.id);
-            yield database_1.default.query('INSERT INTO dia set dia="Martes", idagenda= ?', req.body.id);
-            yield database_1.default.query('INSERT INTO dia set dia="Miércoles", idagenda= ?', req.body.id);
-            yield database_1.default.query('INSERT INTO dia set dia="Jueves", idagenda= ?', req.body.id);
-            yield database_1.default.query('INSERT INTO dia set dia="Viernes", idagenda= ?', req.body.id);
-            yield database_1.default.query('INSERT INTO dia set dia="Sábado", idagenda= ?', req.body.id);
-            yield database_1.default.query('INSERT INTO dia set dia="Domingo", idagenda= ?', req.body.id);
+            yield database_1.default.query('INSERT INTO dia set dia.dia="Lunes", idagenda= ?', req.body.id);
+            yield database_1.default.query('INSERT INTO dia set dia.dia="Martes", idagenda= ?', req.body.id);
+            yield database_1.default.query('INSERT INTO dia set dia.dia="Miércoles", idagenda= ?', req.body.id);
+            yield database_1.default.query('INSERT INTO dia set dia.dia="Jueves", idagenda= ?', req.body.id);
+            yield database_1.default.query('INSERT INTO dia set dia.dia="Viernes", idagenda= ?', req.body.id);
+            yield database_1.default.query('INSERT INTO dia set dia.dia="Sábado", idagenda= ?', req.body.id);
+            yield database_1.default.query('INSERT INTO dia set dia.dia="Domingo", idagenda= ?', req.body.id);
             res.json({ message: 'Agenda guardada' });
         });
     }
